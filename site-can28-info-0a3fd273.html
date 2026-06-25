@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加拿大28 · 站点介绍与可信说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f8f6f0;
+      color: #2c3e3f;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #fefcf7;
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      padding: 2.5rem 2rem;
+    }
+
+    /* hero 简洁视觉 */
+    .hero {
+      text-align: center;
+      padding: 2rem 0 1.8rem;
+      border-bottom: 1px solid #e5e0d6;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #1f3a3b;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #6b6b64;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* 主视觉卡片——站点概览与可信说明 */
+    .intro-card {
+      background: #f3efe8;
+      padding: 2rem 2rem 2rem 2.2rem;
+      border-radius: 24px;
+      margin: 2rem 0 2.4rem;
+      border-left: 6px solid #7f9a8a;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .intro-card p {
+      font-size: 1.05rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .intro-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-card a {
+      color: #2e614f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .intro-card a:hover {
+      color: #1b4235;
+    }
+
+    /* 用途卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.6rem;
+      margin: 2.6rem 0;
+    }
+
+    .card-item {
+      background: #fbfaf6;
+      border-radius: 20px;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid #e7e2d9;
+      transition: transform 0.1s ease, background 0.2s ease;
+    }
+
+    .card-item:hover {
+      background: #f7f2ea;
+      transform: translateY(-3px);
+    }
+
+    .card-item h3 {
+      font-size: 1.2rem;
+      font-weight: 550;
+      color: #2c4e46;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.3px;
+    }
+
+    .card-item p {
+      font-size: 0.98rem;
+      color: #465652;
+    }
+
+    /* 适合人群区块 */
+    .audience-box {
+      background: #f1efe9;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .audience-box h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #1d3d3a;
+      margin-bottom: 0.9rem;
+      border-bottom: 2px solid #d6d0c4;
+      padding-bottom: 0.5rem;
+    }
+
+    .audience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.4rem;
+      list-style: none;
+    }
+
+    .audience-tags li {
+      background: #fffcf7;
+      padding: 0.4rem 1.1rem;
+      border-radius: 40px;
+      border: 1px solid #dad3c8;
+      font-size: 0.95rem;
+      color: #2f524a;
+    }
+
+    /* 引用块 / 提示框 */
+    .note-box {
+      background: #e7eade;
+      border-radius: 18px;
+      padding: 1.4rem 1.8rem;
+      margin: 2.2rem 0;
+      border-left: 6px solid #6a8a7a;
+      color: #1f3936;
+    }
+
+    .note-box p {
+      font-style: normal;
+      margin-bottom: 0.4rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin: 2rem 0 0.8rem;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #1d3d3a;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-item {
+      padding: 0.7rem 0;
+      border-bottom: 1px dashed #dad4c8;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      color: #2a5248;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    /* 自然链接段落 */
+    .link-sentence {
+      background: transparent;
+      padding: 1rem 0 0.2rem;
+      font-size: 1.02rem;
+      color: #3a4f4a;
+    }
+
+    .link-sentence a {
+      color: #2e614f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .link-sentence a:hover {
+      color: #193b30;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #e1dbd0;
+      margin: 2rem 0 1rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7a7b72;
+      padding-top: 1rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 1.8rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .intro-card {
+        padding: 1.5rem 1.2rem;
+      }
+      .audience-box {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <h1>加拿大28 · 信息站点</h1>
+    <div class="sub">基于站点介绍与可信说明的内容页面，帮助新访客快速了解平台定位与使用场景</div>
+  </div>
+
+  <!-- 主视觉 + 可信说明卡片 -->
+  <div class="intro-card">
+    <p><strong>关于加拿大28</strong> —— 这是一个面向玩家提供数字趋势参考与交流内容的平台。站点围绕数据呈现、玩法说明与社区讨论组织内容，不涉及任何形式的资金交易或投注引导。</p>
+    <p>所有信息均用于个人学习与娱乐参考，请理性看待。如果你希望进一步了解平台的结构与日常更新，可以访问 <a href="https://site-can28.com">加拿大28</a> 直接浏览首页内容。</p>
+  </div>
+
+  <!-- 用途卡片：三张差异化说明 -->
+  <div class="card-grid">
+    <div class="card-item">
+      <h3>玩法参考</h3>
+      <p>梳理常见数字组合与趋势分类，方便新手快速理解规则背景，减少盲目尝试。</p>
+    </div>
+    <div class="card-item">
+      <h3>数据观察</h3>
+      <p>整合历史数据与波动特征，为喜欢自行分析的朋友提供原始素材，不包含预测结论。</p>
+    </div>
+    <div class="card-item">
+      <h3>社区讨论</h3>
+      <p>用户可以在特定板块分享经验、提问或交流心得，营造理性、平和的讨论氛围。</p>
+    </div>
+  </div>
+
+  <!-- 适合人群 -->
+  <div class="audience-box">
+    <h2>哪些人可能会关注这里</h2>
+    <ul class="audience-tags">
+      <li>数字趋势爱好者</li>
+      <li>规则学习入门者</li>
+      <li>休闲娱乐型访客</li>
+      <li>希望交流经验的玩家</li>
+      <li>对数据复盘感兴趣的人</li>
+    </ul>
+  </div>
+
+  <!-- 提示框 / 引用块 -->
+  <div class="note-box">
+    <p>📌 提示：本站所有内容均来自公开整理与用户分享，不构成任何操作建议。请保持理性判断，合理安排时间与精力。</p>
+    <p style="margin-top:0.4rem;">—— 站点内容持续更新，建议定期浏览以获取最新信息。</p>
+  </div>
+
+  <!-- FAQ 摘要（简略） -->
+  <div class="faq-summary">
+    <h2>常见疑问 · 摘要</h2>
+    <div class="faq-item">
+      <strong>这个站点提供实时结果吗？</strong>
+      <p>页面展示趋势与历史数据，实时信息请以平台实际显示为准。部分数据存在延迟，仅供参考。</p>
+    </div>
+    <div class="faq-item">
+      <strong>需要注册才能浏览吗？</strong>
+      <p>首页及大部分内容可公开查阅，部分社区功能可能需要简单注册以参与讨论。</p>
+    </div>
+    <div class="faq-item">
+      <strong>内容是否有保障？</strong>
+      <p>所有内容均基于公开信息与用户分享，平台不进行人为篡改，但不对第三方引用负责。</p>
+    </div>
+  </div>
+
+  <!-- 自然链接段落（嵌入句子） -->
+  <div class="link-sentence">
+    <p>如果你刚刚接触这类信息源，可以先从首页的内容分类入手，逐步了解数据排列的逻辑。很多长期关注 <a href="https://site-can28.com">加拿大28</a> 的访客都表示，熟悉基础规则之后，观察数据会更有头绪。</p>
+  </div>
+
+  <hr>
+
+  <div class="footer-note">
+    加拿大28 · 信息卡片式介绍页 &nbsp;|&nbsp; 仅供学习参考
+  </div>
+</div>
+</body>
+</html>
